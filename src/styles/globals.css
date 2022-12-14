@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Secular One';
+    src: url('../assets/fonts/SecularOne.ttf');
+  }
+
+  body {
+    @apply font-body;
+    @apply font-light;
+    @apply bg-gradient-to-br from-primary-blue-dark to-primary-purple-dark;
+    @apply from-primary-blue-dark;
+    @apply to-primary-purple-dark;
+  }
+
+  h1 {
+    @apply font-heading;
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply font-heading;
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply font-heading;
+    @apply text-lg;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+    @apply text-md;
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+}
