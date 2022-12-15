@@ -6,7 +6,7 @@ type GameCardProps = FunctionComponent<
 >
 
 export const GameCard: GameCardProps = ({ name, image }) => (
-  <div className="w-screen-8/10 h-screen-w-6/10 relative">
+  <div className="w-screen-8/10 md:w-full h-screen-w-6/10 md:h-31.25 relative">
     {image && (
       <>
         <img
