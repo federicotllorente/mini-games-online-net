@@ -15,14 +15,14 @@ export const GameCardGrid: GameCardGridProps = ({
   title,
   displayTitle = true
 }) => (
-  <>
-    {title && displayTitle && <h3>{title}</h3>}
+  <div>
+    {title && displayTitle && <h3 className="pb-1.5">{title}</h3>}
     <div className="overflow-x-scroll -mx-3 px-3">
-      <div className="w-max flex pt-2 gap-1.5">
+      <div className="w-max flex gap-1.5">
         {gameCardList.map((gameCard, idx) => (
           <GameCard key={`game-card-${idx}`} {...gameCard} />
         ))}
       </div>
     </div>
-  </>
+  </div>
 )

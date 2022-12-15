@@ -5,21 +5,26 @@ import { GameCardGrid } from '~components/organisms/GameCardGrid'
 
 const Homepage: NextPage = () => {
   const { t } = useTranslation()
-  const { firstName, lastName, points, recentlyPlayedGames } = mockedData // TODO
+  const { firstName, lastName, points, recentlyPlayedGames, allGames } =
+    mockedData // TODO
 
   return (
-    <section>
+    <>
       <ProfileSummary
         firstName={firstName}
         lastName={lastName}
         points={points}
       />
-      <h2 className="py-3">{t('homepage.welcome', { firstName })}</h2>
+      <h2>{t('homepage.welcome', { firstName })}</h2>
       <GameCardGrid
         title={t('homepage.recently-played') ?? undefined}
         gameCardList={recentlyPlayedGames}
       />
-    </section>
+      <GameCardGrid
+        title={t('routes.all-games') ?? undefined}
+        gameCardList={allGames}
+      />
+    </>
   )
 }
 
@@ -27,10 +32,34 @@ const mockedData = {
   firstName: 'FirstName',
   lastName: 'LastName',
   points: 1024,
-  recentlyPlayedGames: Array(3).fill({
-    name: 'Candy Crush Saga',
-    image: '/static/images/candy-crush-saga.png'
-  })
+  recentlyPlayedGames: [
+    {
+      name: 'Minecraft',
+      image: '/static/images/minecraft.jpg'
+    },
+    {
+      name: 'Candy Crush Saga',
+      image: '/static/images/candy-crush-saga.png'
+    }
+  ],
+  allGames: [
+    {
+      name: 'Candy Crush Saga',
+      image: '/static/images/candy-crush-saga.png'
+    },
+    {
+      name: 'Minecraft',
+      image: '/static/images/minecraft.jpg'
+    },
+    {
+      name: 'Tetris',
+      image: '/static/images/tetris.jpg'
+    },
+    {
+      name: '2048',
+      image: '/static/images/2048.jpg'
+    }
+  ]
 }
 
 export default Homepage
