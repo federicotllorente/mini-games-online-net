@@ -36,3 +36,26 @@ export const allRoutes = {
     es: '/cerrar-sesion'
   }
 }
+
+export const mobileBottomMenu = {
+  home: {
+    en: '/',
+    es: '/'
+  },
+  'all-games': {
+    en: '/all-games',
+    es: '/todos-los-juegos'
+  },
+  favorites: {
+    en: '/favorites',
+    es: '/favoritos'
+  },
+  profile: {
+    en: '/profile',
+    es: '/perfil'
+  },
+  settings: {
+    en: '/settings',
+    es: '/configuraciones'
+  }
+}
