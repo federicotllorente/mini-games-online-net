@@ -73,7 +73,8 @@ module.exports = withBundleAnalyzer({
   // },
   publicRuntimeConfig: {
     featureFlags: {
-      blog: process.env.FEATURE_FLAG_BLOG === 'false' ? false : true
+      isInProgress:
+        process.env.FEATURE_FLAG_IS_IN_PROGRESS === 'false' ? false : true
     }
   },
   webpack(config) {
